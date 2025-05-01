@@ -1,0 +1,22 @@
+{
+    "name": "beginner-lab-biotech",
+    "version": "1.0.0",
+    "description": "Website for BioTech student queries",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "biotech",
+      "students",
+      "query",
+      "email",
+      "sop"
+    ],
+    "author": "Nupur Pal (Concept)",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.18.2" 
+    }
+  }

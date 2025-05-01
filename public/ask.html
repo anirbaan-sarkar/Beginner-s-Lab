@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question - Beginner's Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">Beginner's Lab</div>
+            <nav class="main-nav">
+                 <ul>
+                   <li><a href="/">Home</a></li>
+                   <li><a href="/about">About Us</a></li>
+                   <li><a href="/email-tips">Email Guidance</a></li>
+                   <li><a href="/sop-tips">SOP Insights</a></li>
+                   <li><a href="/ask" class="active">Ask a Question</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="ask-question" class="page-section ask-section">
+            <div class="container">
+                <h2>Ask Your BioTech Question</h2>
+                <p>Have a specific question related to BioTech studies, applications, or career paths? Fill out the form below. Your query will be sent directly to our team for review. We'll try our best to address common themes in future tips or potentially reach out if more context is needed.</p>
+
+                <div class="contact-form-container">
+                    <form id="query-form">
+                         <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g., BioTech Query via Beginner's Lab" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question">Your Question / Message</label>
+                            <textarea id="question" name="question" rows="8" placeholder="Please be as specific as possible..." required></textarea>
+                        </div>
+                         <button type="submit" class="cta-button" id="submit-button">Send Question</button>
+                         <div id="form-status"></div> <!-- For success/error messages -->
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> Beginner's Lab. All rights reserved.</p>
+            <p>Concept by Nupur Pal</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

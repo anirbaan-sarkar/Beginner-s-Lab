@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's Lab - BioTech Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons (optional, you can use SVGs or Unicode) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header/Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <span class="hero-tag">
+                <i class="fa-solid fa-flask-vial" aria-hidden="true"></i> For Biotech Students
+            </span>
+            <h1>Welcome to <span class="highlight-green">Beginner's Lab</span></h1>
+            <p class="hero-subtitle">
+                Your trusted resource for biotechnology students. We provide expert guidance
+                on academic writing, research opportunities, lab techniques, and career
+                development in the biotech field.
+            </p>
+            <div class="hero-buttons">
+                <a href="#content-sections" class="btn btn-primary">Read Biotech Blogs</a>
+                <a href="#ask-question-card" class="btn btn-secondary-outline">Ask a Question</a>
+                <button class="btn btn-tertiary-outline" id="admin-login-btn">Admin Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Us Section -->
+        <section id="about" class="page-section about-section">
+            <div class="container">
+                <div class="section-title-container">
+                    <h2 class="section-title">
+                      About Us
+                      <span class="title-underline"></span>
+                    </h2>
+                </div>
+
+                <div class="about-content-wrapper"> <!-- Optional wrapper for centering content below title -->
+                    <div class="profile-icon-container">
+                        <i class="fa-regular fa-user profile-icon"></i>
+                    </div>
+                    <!-- UPDATE THIS LINE -->
+                    <h3>Admin</h3>
+                    <!-- END UPDATE -->
+                    <p class="profile-title">
+                        Founder, Beginner's Lab | Biotechnology Specialist
+                    </p>
+                    <p class="about-description">
+                        Beginner's Lab was founded with a mission to support biotechnology students throughout their
+                        academic journey. With extensive experience in molecular biology research and biotechnology
+                        education, we understand the unique challenges biotech students face in their coursework,
+                        laboratory experiences, and career development.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag"><i class="fa-solid fa-leaf"></i> Molecular Biology</span>
+                        <span class="tag"><i class="fa-solid fa-leaf"></i> Genetic Engineering</span>
+                        <span class="tag"><i class="fa-solid fa-leaf"></i> Bioinformatics</span>
+                    </div>
+                    <p class="about-description">
+                        Our platform offers practical advice on crafting professional emails to research professors, writing
+                        compelling statements of purpose for biotech programs, and addressing various academic and
+                        laboratory concerns. We believe that with the right guidance, every biotech student can excel in this
+                        rapidly evolving field.
+                    </p>
+                </div> <!-- End about-content-wrapper -->
+
+            </div>
+        </section>
+
+        <!-- Content Sections (Email, SOP, Ask) -->
+        <section id="content-sections" class="page-section content-grid-section">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Email Tips Card -->
+                    <article class="content-card">
+                        <div class="card-header">
+                             <span class="card-icon green"><i class="fa-regular fa-lightbulb"></i></span>
+                             <h4>Email Tips for Biotech Students</h4>
+                        </div>
+                        <p class="card-subtitle">How to effectively communicate with professors and industry professionals</p>
+                        <ol class="styled-list">
+                            <li>Address professors with their proper titles and mention specific biotech research interests</li>
+                            <li>Include relevant coursework or lab experience in your introduction</li>
+                            <li>Be specific about which biotech research papers or projects you're referencing</li>
+                            <li>Use proper scientific terminology and avoid jargon when unnecessary</li>
+                            <li>Request specific information about research opportunities or lab positions</li>
+                        </ol>
+                    </article>
+
+                    <!-- SOP Tips Card -->
+                    <article class="content-card">
+                         <div class="card-header">
+                            <span class="card-icon green"><i class="fa-regular fa-file-lines"></i></span>
+                            <h4>SOP Tips for Biotech Programs</h4>
+                         </div>
+                        <p class="card-subtitle">Guidelines for crafting a compelling Statement of Purpose for biotech programs</p>
+                         <ol class="styled-list">
+                            <li>Highlight specific biotech laboratory techniques you've mastered</li>
+                            <li>Discuss relevant research experience in molecular biology, genetics, or biochemistry</li>
+                            <li>Explain your interest in specific biotech subfields (e.g., genetic engineering, bioinformatics)</li>
+                            <li>Connect your academic background to current biotech industry challenges</li>
+                            <li>Mention specific faculty members whose research aligns with your interests</li>
+                            <li>Include any publications, presentations, or biotech competitions you've participated in</li>
+                        </ol>
+                    </article>
+
+                    <!-- Ask a Question Card -->
+                    <article class="content-card form-card" id="ask-question-card">
+                        <div class="card-header">
+                            <span class="card-icon green"><i class="fa-regular fa-comments"></i></span>
+                            <h4>Ask a Biotech Question</h4>
+                        </div>
+                        <p class="card-subtitle">Submit your biotech-related question and we'll format it as an email draft</p>
+
+                        <form id="query-form" class="ask-form">
+                             <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                             <!-- Hidden Subject Field (or can be shown) -->
+                             <input type="hidden" id="subject" name="subject" value="BioTech Query via Beginner's Lab">
+
+                            <div class="form-group">
+                                <label for="question">Your Question</label>
+                                <textarea id="question" name="question" rows="6" placeholder="Type your biotech-related question here..." required></textarea>
+                            </div>
+                             <button type="submit" class="btn btn-dark" id="submit-button">
+                                <i class="fa-regular fa-envelope"></i> Submit Question
+                             </button>
+                             <div id="form-status"></div> <!-- For success/error messages -->
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> Beginner's Lab. All rights reserved.</p>
+             <!-- Add social links or other footer info if needed -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
