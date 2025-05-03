@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Add Font Awesome for icons (optional, you can use SVGs or Unicode) -->
+    <!-- Add Font Awesome if still needed for other sections -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head> 
+</head>
 <body>
 
     <!-- Header/Hero Section -->
@@ -26,7 +26,7 @@
                 development in the biotech field.
             </p>
             <div class="hero-buttons">
-                <a href="#content-sections" class="btn btn-primary">Read Biotech Blogs</a>
+                <a href="#content-sections" class="btn btn-primary">Read Biotech Resources</a> <!-- Changed text slightly -->
                 <a href="#ask-question-card" class="btn btn-secondary-outline">Ask a Question</a>
                 <button class="btn btn-tertiary-outline" id="admin-login-btn">Admin Login</button>
             </div>
@@ -37,20 +37,12 @@
         <!-- About Us Section -->
         <section id="about" class="page-section about-section">
             <div class="container">
-                <div class="section-title-container">
-                    <h2 class="section-title">
-                      About Us
-                      <span class="title-underline"></span>
-                    </h2>
-                </div>
-
-                <div class="about-content-wrapper"> <!-- Optional wrapper for centering content below title -->
+                <h2 class="section-title">About Us <span class="title-underline"></span></h2>
+                <div class="about-content-wrapper">
                     <div class="profile-icon-container">
                         <i class="fa-regular fa-user profile-icon"></i>
                     </div>
-                    <!-- UPDATE THIS LINE -->
                     <h3>Admin</h3>
-                    <!-- END UPDATE -->
                     <p class="profile-title">
                         Founder, Beginner's Lab | Biotechnology Specialist
                     </p>
@@ -71,17 +63,68 @@
                         laboratory concerns. We believe that with the right guidance, every biotech student can excel in this
                         rapidly evolving field.
                     </p>
-                </div> <!-- End about-content-wrapper -->
-
+                </div>
             </div>
         </section>
 
+        <!-- ========== UPDATED BLOG SECTION START ========== -->
+        <section id="biotech-blog" class="page-section blog-section-list-view"> <!-- Added new class -->
+            <div class="container">
+                <h2 class="section-title">Biotech Blog <span class="title-underline"></span></h2>
+                <p class="section-subtitle">Latest insights, research highlights, and career tips in the world of biotechnology.</p>
+
+                <div class="blog-post-list-items"> <!-- Wrapper div for posts -->
+
+                    <!-- Blog Post Item 1 -->
+                    <article class="blog-post-item">
+                         <img src="https://via.placeholder.com/750x100/eeeeee/cccccc?text=Blog+post+illustration+(header)" alt="Blog post header placeholder" class="blog-post-image"> <!-- Wider, shorter placeholder -->
+                         <h4><a href="#">CRISPR Advances: Editing the Future of Medicine</a></h4>
+                         <div class="post-meta">
+                            Oct 26, 2023 | Admin <!-- Simplified meta, removed icons -->
+                         </div>
+                         <p>Explore the latest breakthroughs in CRISPR-Cas9 technology and its potential impact on treating genetic disorders...</p>
+                         <a href="#" class="read-more-link">Read More</a>
+                    </article>
+
+                     <!-- Blog Post Item 2 -->
+                     <article class="blog-post-item">
+                         <img src="https://via.placeholder.com/750x100/eeeeee/cccccc?text=Blog+post+illustration+(header)" alt="Blog post header placeholder" class="blog-post-image">
+                         <h4><a href="#">Navigating Your First Biotech Internship: Tips for Success</a></h4>
+                         <div class="post-meta">
+                            Oct 15, 2023 | Admin
+                         </div>
+                         <p>Making the most out of your internship experience. From lab etiquette to networking strategies...</p>
+                         <a href="#" class="read-more-link">Read More</a>
+                    </article>
+
+                    <!-- Blog Post Item 3 -->
+                     <article class="blog-post-item">
+                         <img src="https://via.placeholder.com/750x100/eeeeee/cccccc?text=Blog+post+illustration+(header)" alt="Blog post header placeholder" class="blog-post-image">
+                         <h4><a href="#">The Rise of Bioinformatics in Drug Discovery</a></h4>
+                          <div class="post-meta">
+                            Oct 01, 2023 | Admin
+                          </div>
+                         <p>How computational methods are accelerating the identification and development of new pharmaceuticals...</p>
+                          <a href="#" class="read-more-link">Read More</a>
+                     </article>
+
+                    <!-- Add more blog post articles as needed -->
+
+                </div> <!-- /.blog-post-list-items -->
+
+            </div> <!-- /.container -->
+        </section>
+        <!-- ========== UPDATED BLOG SECTION END ========== -->
+
+
         <!-- Content Sections (Email, SOP, Ask) -->
         <section id="content-sections" class="page-section content-grid-section">
-            <div class="container">
-                <div class="content-grid">
-                    <!-- Email Tips Card -->
-                    <article class="content-card">
+             <div class="container">
+                 <!-- Resource Section Title (Optional) -->
+                 <h2 class="section-title">Quick Resources<span class="title-underline"></span></h2>
+                 <div class="content-grid">
+                     <!-- Email Tips Card -->
+                     <article class="content-card">
                         <div class="card-header">
                              <span class="card-icon green"><i class="fa-regular fa-lightbulb"></i></span>
                              <h4>Email Tips for Biotech Students</h4>
@@ -94,10 +137,9 @@
                             <li>Use proper scientific terminology and avoid jargon when unnecessary</li>
                             <li>Request specific information about research opportunities or lab positions</li>
                         </ol>
-                    </article>
-
+                     </article>
                     <!-- SOP Tips Card -->
-                    <article class="content-card">
+                     <article class="content-card">
                          <div class="card-header">
                             <span class="card-icon green"><i class="fa-regular fa-file-lines"></i></span>
                             <h4>SOP Tips for Biotech Programs</h4>
@@ -111,10 +153,9 @@
                             <li>Mention specific faculty members whose research aligns with your interests</li>
                             <li>Include any publications, presentations, or biotech competitions you've participated in</li>
                         </ol>
-                    </article>
-
-                    <!-- Ask a Question Card -->
-                    <article class="content-card form-card" id="ask-question-card">
+                     </article>
+                     <!-- Ask a Question Card -->
+                     <article class="content-card form-card" id="ask-question-card">
                         <div class="card-header">
                             <span class="card-icon green"><i class="fa-regular fa-comments"></i></span>
                             <h4>Ask a Biotech Question</h4>
@@ -122,36 +163,22 @@
                         <p class="card-subtitle">Submit your biotech-related question and we'll format it as an email draft</p>
 
                         <form id="query-form" class="ask-form">
-                             <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                            </div>
-                             <!-- Hidden Subject Field (or can be shown) -->
+                             <div class="form-group"> <label for="name">Your Name</label> <input type="text" id="name" name="name" placeholder="John Doe" required> </div>
+                            <div class="form-group"> <label for="email">Your Email</label> <input type="email" id="email" name="email" placeholder="john@example.com" required> </div>
                              <input type="hidden" id="subject" name="subject" value="BioTech Query via Beginner's Lab">
-
-                            <div class="form-group">
-                                <label for="question">Your Question</label>
-                                <textarea id="question" name="question" rows="6" placeholder="Type your biotech-related question here..." required></textarea>
-                            </div>
-                             <button type="submit" class="btn btn-dark" id="submit-button">
-                                <i class="fa-regular fa-envelope"></i> Submit Question
-                             </button>
-                             <div id="form-status"></div> <!-- For success/error messages -->
+                            <div class="form-group"> <label for="question">Your Question</label> <textarea id="question" name="question" rows="6" placeholder="Type your biotech-related question here..." required></textarea> </div>
+                             <button type="submit" class="btn btn-dark" id="submit-button"> <i class="fa-regular fa-envelope"></i> Submit Question </button>
+                             <div id="form-status"></div>
                         </form>
                     </article>
-                </div>
-            </div>
+                </div> <!-- /.content-grid -->
+            </div> <!-- /.container -->
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
             <p>© <span id="current-year"></span> Beginner's Lab. All rights reserved.</p>
-             <!-- Add social links or other footer info if needed -->
         </div>
     </footer>
 

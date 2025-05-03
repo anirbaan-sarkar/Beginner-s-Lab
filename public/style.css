@@ -431,3 +431,164 @@ h1 .highlight-green {
     .styled-list li::before { width: 24px; height: 24px; font-size: 0.8rem; } /* Smaller numbers */
 
 }
+
+/* --- NEW Blog Section Styles --- */
+.blog-section {
+    background-color: #fff; /* White background, contrasting light-grey grid section */
+    /* Inherits padding from .page-section */
+    border-top: 1px solid var(--border-color-light); /* Separator line */
+}
+
+/* Center the Blog Title and its subtitle */
+.blog-section .section-title,
+.blog-section .section-subtitle {
+    text-align: center;
+    max-width: 750px; /* Keep consistency */
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog-section .section-subtitle {
+    color: var(--secondary-text);
+    margin-bottom: 2.5em; /* Space below subtitle */
+    font-size: clamp(1rem, 2vw, 1.05rem);
+}
+.blog-section .title-underline {
+    margin: 8px auto 30px auto; /* Center underline */
+    width: 60px; /* Standard width */
+}
+
+
+/* Blog Post List Layout */
+.blog-post-list {
+    display: grid;
+    /* Use similar grid setup as content-grid */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: clamp(25px, 4vw, 35px); /* Responsive gap */
+}
+
+/* Individual Blog Post Preview Card */
+.blog-post-preview {
+    background-color: var(--light-grey-bg); /* Slight off-white background for previews */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color-light);
+    overflow: hidden; /* Ensure image border-radius works */
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-post-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Post Thumbnail (Image Area) */
+.post-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image nicely */
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+/* Post Content Area */
+.post-content {
+    padding: clamp(20px, 3vw, 25px); /* Responsive padding */
+    flex-grow: 1; /* Allow content to push button down */
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content h4 {
+    margin-bottom: 0.5em;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem); /* Title size */
+    line-height: 1.4;
+}
+.post-content h4 a {
+    color: var(--dark-text);
+    text-decoration: none;
+}
+.post-content h4 a:hover {
+    color: var(--primary-green);
+}
+
+/* Post Metadata (Date, Author) */
+.post-meta {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+    margin-bottom: 1em;
+}
+.post-meta span {
+    margin-right: 5px;
+    white-space: nowrap; /* Prevent wrapping */
+}
+.post-meta i {
+    margin-right: 4px;
+    color: var(--primary-green);
+}
+
+
+/* Post Excerpt */
+.post-content p {
+    font-size: clamp(0.9rem, 1.8vw, 0.95rem); /* Excerpt size */
+    margin-bottom: 1.5em;
+    flex-grow: 1; /* Take up available space */
+}
+
+
+/* "Read More" Button Style */
+.btn.btn-primary-outline { /* Adding specific styles */
+    background-color: transparent;
+    color: var(--primary-green);
+    border-color: var(--primary-green);
+    /* Inherit other btn styles */
+}
+.btn.btn-primary-outline:hover {
+    background-color: var(--light-green-bg);
+    color: #218838;
+    border-color: #218838;
+     /* Inherit transform/shadow from .btn hover if needed */
+    transform: translateY(-2px);
+}
+.btn.btn-small { /* Make Read More button smaller */
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    align-self: flex-start; /* Align button left */
+    margin-top: auto; /* Pushes button to bottom if content varies */
+}
+
+
+/* --- Update existing sections slightly --- */
+/* Add border-top to content grid section if needed for separation */
+.content-grid-section {
+    /* Remove background if blog section has light grey */
+    /* background-color: var(--light-grey-bg); */
+     background-color: #fff; /* Keep white */
+     border-top: 1px solid var(--border-color-light); /* Ensure separation */
+    /* Remove title if desired */
+    /* .section-title, .title-underline { display: none; } */
+}
+
+/* --- Add Blog styles to Responsive Adjustments --- */
+/* Small Tablet / Large Mobile */
+@media (max-width: 768px) {
+    /* (Keep existing 768px rules) *    /
+    /* No major changes needed for blog grid yet, as it already stacks */
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    /* (Keep existing 576px rules) */
+     .blog-post-preview .post-thumbnail img {
+        height: 180px; /* Slightly smaller image height on mobile */
+    }
+    .blog-section .section-subtitle {
+        margin-bottom: 1.5em; /* Less space */
+    }
+     .btn.btn-small { /* Ensure button isn't too tiny */
+        padding: 7px 18px;
+        font-size: 0.85rem;
+    }
+    .post-meta { font-size: 0.8rem; }
+}
